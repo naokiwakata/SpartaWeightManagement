@@ -14,6 +14,9 @@
 		23A1F47B29742820008098C6 /* SpartaWeightManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F47A29742820008098C6 /* SpartaWeightManagementTests.swift */; };
 		23A1F48529742820008098C6 /* SpartaWeightManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F48429742820008098C6 /* SpartaWeightManagementUITests.swift */; };
 		23A1F48729742820008098C6 /* SpartaWeightManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F48629742820008098C6 /* SpartaWeightManagementUITestsLaunchTests.swift */; };
+		23A1F49429742AED008098C6 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F49329742AED008098C6 /* InputView.swift */; };
+		23A1F49629742AFE008098C6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F49529742AFE008098C6 /* GraphView.swift */; };
+		23A1F49829742B74008098C6 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F49729742B74008098C6 /* TopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		23A1F48029742820008098C6 /* SpartaWeightManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpartaWeightManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A1F48429742820008098C6 /* SpartaWeightManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaWeightManagementUITests.swift; sourceTree = "<group>"; };
 		23A1F48629742820008098C6 /* SpartaWeightManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaWeightManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23A1F49329742AED008098C6 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		23A1F49529742AFE008098C6 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		23A1F49729742B74008098C6 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */,
-				23A1F46B2974281F008098C6 /* ContentView.swift */,
+				23A1F49929742C60008098C6 /* View */,
 				23A1F46D29742820008098C6 /* Assets.xcassets */,
 				23A1F46F29742820008098C6 /* Preview Content */,
 			);
@@ -125,6 +131,17 @@
 				23A1F48629742820008098C6 /* SpartaWeightManagementUITestsLaunchTests.swift */,
 			);
 			path = SpartaWeightManagementUITests;
+			sourceTree = "<group>";
+		};
+		23A1F49929742C60008098C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23A1F46B2974281F008098C6 /* ContentView.swift */,
+				23A1F49729742B74008098C6 /* TopView.swift */,
+				23A1F49329742AED008098C6 /* InputView.swift */,
+				23A1F49529742AFE008098C6 /* GraphView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A1F49429742AED008098C6 /* InputView.swift in Sources */,
+				23A1F49829742B74008098C6 /* TopView.swift in Sources */,
 				23A1F46C2974281F008098C6 /* ContentView.swift in Sources */,
 				23A1F46A2974281F008098C6 /* SpartaWeightManagementApp.swift in Sources */,
+				23A1F49629742AFE008098C6 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
