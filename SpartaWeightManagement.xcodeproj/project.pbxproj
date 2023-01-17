@@ -20,6 +20,7 @@
 		2360D22C2976D4CA00837382 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D22B2976D4CA00837382 /* LandmarkRow.swift */; };
 		2360D22E2976D55500837382 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D22D2976D55500837382 /* LandmarkList.swift */; };
 		2360D2302976D5D600837382 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D22F2976D5D600837382 /* LandmarkDetail.swift */; };
+		2360D2342976E96E00837382 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D2332976E96E00837382 /* FavoriteButton.swift */; };
 		23A1F46A2974281F008098C6 /* SpartaWeightManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */; };
 		23A1F46C2974281F008098C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F46B2974281F008098C6 /* ContentView.swift */; };
 		23A1F46E29742820008098C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A1F46D29742820008098C6 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		2360D22B2976D4CA00837382 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		2360D22D2976D55500837382 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		2360D22F2976D5D600837382 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		2360D2332976E96E00837382 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		23A1F4662974281F008098C6 /* SpartaWeightManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaWeightManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaWeightManagementApp.swift; sourceTree = "<group>"; };
 		23A1F46B2974281F008098C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,13 +127,30 @@
 		2360D22A2976D4AB00837382 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				2360D2202976D32800837382 /* MapView.swift */,
-				2360D21E2976D19600837382 /* CircleImage.swift */,
+				2360D2362976E9AB00837382 /* Helpers */,
+				2360D2352976E99400837382 /* Landmarks */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		2360D2352976E99400837382 /* Landmarks */ = {
+			isa = PBXGroup;
+			children = (
 				2360D22B2976D4CA00837382 /* LandmarkRow.swift */,
 				2360D22D2976D55500837382 /* LandmarkList.swift */,
 				2360D22F2976D5D600837382 /* LandmarkDetail.swift */,
 			);
-			path = Tutorial;
+			path = Landmarks;
+			sourceTree = "<group>";
+		};
+		2360D2362976E9AB00837382 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2360D2202976D32800837382 /* MapView.swift */,
+				2360D21E2976D19600837382 /* CircleImage.swift */,
+				2360D2332976E96E00837382 /* FavoriteButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		23A1F45D2974281F008098C6 = {
@@ -359,6 +378,7 @@
 				23A1F49629742AFE008098C6 /* GraphView.swift in Sources */,
 				2360D22C2976D4CA00837382 /* LandmarkRow.swift in Sources */,
 				2360D21F2976D19600837382 /* CircleImage.swift in Sources */,
+				2360D2342976E96E00837382 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
