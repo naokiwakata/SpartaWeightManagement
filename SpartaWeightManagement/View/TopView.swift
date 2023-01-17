@@ -1,10 +1,3 @@
-//
-//  TopView.swift
-//  SpartaWeightManagement
-//
-//  Created by 若田直希 on 2023/01/15.
-//
-
 import SwiftUI
 
 struct TopView: View {
@@ -16,14 +9,14 @@ struct TopView: View {
                         Image(systemName: "person.fill")
                         Text("メイン")
                     }
-                }.tag(1)
+                }
             GraphView()
                 .tabItem {
                     VStack {
                         Image(systemName: "waveform.path.ecg")
                         Text("グラフ")
                     }
-                }.tag(2)
+                }
         }
         
     }
