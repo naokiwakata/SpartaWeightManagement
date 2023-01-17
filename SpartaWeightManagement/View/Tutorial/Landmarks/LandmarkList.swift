@@ -14,7 +14,7 @@ struct LandmarkList: View {
         NavigationView {
             List {
                 Toggle(isOn: $showFavoritesOnly) {
-                    Text("Favorites only")
+                    Text("お気に入りのみ")
                 }
                 
                 ForEach(filteredLandmarks) { landmark in                NavigationLink {
