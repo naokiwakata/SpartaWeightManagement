@@ -21,6 +21,10 @@
 		2360D22E2976D55500837382 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D22D2976D55500837382 /* LandmarkList.swift */; };
 		2360D2302976D5D600837382 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D22F2976D5D600837382 /* LandmarkDetail.swift */; };
 		2360D2342976E96E00837382 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D2332976E96E00837382 /* FavoriteButton.swift */; };
+		2360D23B29779AD700837382 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D23A29779AD700837382 /* UsersRepository.swift */; };
+		2360D23E29779B7600837382 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2360D23D29779B7600837382 /* FirebaseFirestoreSwift */; };
+		2360D24029779C6800837382 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D23F29779C6800837382 /* User.swift */; };
+		2360D2422979223D00837382 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D2412979223D00837382 /* InputViewModel.swift */; };
 		23A1F46A2974281F008098C6 /* SpartaWeightManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */; };
 		23A1F46C2974281F008098C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F46B2974281F008098C6 /* ContentView.swift */; };
 		23A1F46E29742820008098C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A1F46D29742820008098C6 /* Assets.xcassets */; };
@@ -61,6 +65,9 @@
 		2360D22D2976D55500837382 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		2360D22F2976D5D600837382 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		2360D2332976E96E00837382 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		2360D23A29779AD700837382 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		2360D23F29779C6800837382 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2360D2412979223D00837382 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		23A1F4662974281F008098C6 /* SpartaWeightManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaWeightManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaWeightManagementApp.swift; sourceTree = "<group>"; };
 		23A1F46B2974281F008098C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +94,7 @@
 				2360D217297430DD00837382 /* FirebaseAuth in Frameworks */,
 				2360D21D297430DD00837382 /* FirebaseStorage in Frameworks */,
 				2360D219297430DD00837382 /* FirebaseFirestore in Frameworks */,
+				2360D23E29779B7600837382 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +118,8 @@
 		2360D2262976D41E00837382 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2360D2222976D39A00837382 /* Landmark.swift */,
-				2360D2242976D3D000837382 /* ModelData.swift */,
+				2360D2372976ECD800837382 /* Tutorial */,
+				2360D23F29779C6800837382 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +161,31 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2360D2372976ECD800837382 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				2360D2222976D39A00837382 /* Landmark.swift */,
+				2360D2242976D3D000837382 /* ModelData.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		2360D2382977925200837382 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2360D2412979223D00837382 /* InputViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2360D2392977926D00837382 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2360D23A29779AD700837382 /* UsersRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		23A1F45D2974281F008098C6 = {
 			isa = PBXGroup;
 			children = (
@@ -176,12 +209,14 @@
 		23A1F4682974281F008098C6 /* SpartaWeightManagement */ = {
 			isa = PBXGroup;
 			children = (
-				2360D2292976D44F00837382 /* Resource */,
+				2360D2392977926D00837382 /* Repository */,
+				2360D2382977925200837382 /* ViewModel */,
+				23A1F46F29742820008098C6 /* Preview Content */,
+				23A1F46D29742820008098C6 /* Assets.xcassets */,
 				23A1F49B29742F4E008098C6 /* GoogleService-Info.plist */,
 				23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */,
+				2360D2292976D44F00837382 /* Resource */,
 				23A1F49929742C60008098C6 /* View */,
-				23A1F46D29742820008098C6 /* Assets.xcassets */,
-				23A1F46F29742820008098C6 /* Preview Content */,
 				2360D2262976D41E00837382 /* Model */,
 			);
 			path = SpartaWeightManagement;
@@ -246,6 +281,7 @@
 				2360D218297430DD00837382 /* FirebaseFirestore */,
 				2360D21A297430DD00837382 /* FirebaseMessaging */,
 				2360D21C297430DD00837382 /* FirebaseStorage */,
+				2360D23D29779B7600837382 /* FirebaseFirestoreSwift */,
 			);
 			productName = SpartaWeightManagement;
 			productReference = 23A1F4662974281F008098C6 /* SpartaWeightManagement.app */;
@@ -321,6 +357,7 @@
 			mainGroup = 23A1F45D2974281F008098C6;
 			packageReferences = (
 				2360D213297430DD00837382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2360D23C29779B7600837382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 23A1F4672974281F008098C6 /* Products */;
 			projectDirPath = "";
@@ -374,7 +411,10 @@
 				23A1F49829742B74008098C6 /* TopView.swift in Sources */,
 				2360D2232976D39A00837382 /* Landmark.swift in Sources */,
 				23A1F46C2974281F008098C6 /* ContentView.swift in Sources */,
+				2360D24029779C6800837382 /* User.swift in Sources */,
+				2360D23B29779AD700837382 /* UsersRepository.swift in Sources */,
 				23A1F46A2974281F008098C6 /* SpartaWeightManagementApp.swift in Sources */,
+				2360D2422979223D00837382 /* InputViewModel.swift in Sources */,
 				23A1F49629742AFE008098C6 /* GraphView.swift in Sources */,
 				2360D22C2976D4CA00837382 /* LandmarkRow.swift in Sources */,
 				2360D21F2976D19600837382 /* CircleImage.swift in Sources */,
@@ -713,6 +753,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		2360D23C29779B7600837382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -740,6 +788,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2360D213297430DD00837382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		2360D23D29779B7600837382 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2360D213297430DD00837382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
