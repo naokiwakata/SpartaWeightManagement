@@ -7,7 +7,7 @@ class InputViewModel: ObservableObject {
     
     
     func fetch() {
-        weightsRepository.fetchWeights2{ (weights) in
+        weightsRepository.fetchWeights{ (weights) in
             self.weights = weights
         }
     }
