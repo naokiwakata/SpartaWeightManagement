@@ -25,6 +25,8 @@
 		2360D23E29779B7600837382 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2360D23D29779B7600837382 /* FirebaseFirestoreSwift */; };
 		2360D24029779C6800837382 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D23F29779C6800837382 /* User.swift */; };
 		2360D2422979223D00837382 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D2412979223D00837382 /* InputViewModel.swift */; };
+		2360D244297BDAC600837382 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D243297BDAC600837382 /* Weight.swift */; };
+		2360D246297BDE5F00837382 /* WeightsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360D245297BDE5F00837382 /* WeightsRepository.swift */; };
 		23A1F46A2974281F008098C6 /* SpartaWeightManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */; };
 		23A1F46C2974281F008098C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1F46B2974281F008098C6 /* ContentView.swift */; };
 		23A1F46E29742820008098C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A1F46D29742820008098C6 /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		2360D23A29779AD700837382 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
 		2360D23F29779C6800837382 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2360D2412979223D00837382 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		2360D243297BDAC600837382 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		2360D245297BDE5F00837382 /* WeightsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightsRepository.swift; sourceTree = "<group>"; };
 		23A1F4662974281F008098C6 /* SpartaWeightManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaWeightManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A1F4692974281F008098C6 /* SpartaWeightManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpartaWeightManagementApp.swift; sourceTree = "<group>"; };
 		23A1F46B2974281F008098C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			children = (
 				2360D2372976ECD800837382 /* Tutorial */,
 				2360D23F29779C6800837382 /* User.swift */,
+				2360D243297BDAC600837382 /* Weight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2360D23A29779AD700837382 /* UsersRepository.swift */,
+				2360D245297BDE5F00837382 /* WeightsRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -405,6 +411,8 @@
 			files = (
 				2360D2212976D32800837382 /* MapView.swift in Sources */,
 				2360D22E2976D55500837382 /* LandmarkList.swift in Sources */,
+				2360D244297BDAC600837382 /* Weight.swift in Sources */,
+				2360D246297BDE5F00837382 /* WeightsRepository.swift in Sources */,
 				23A1F49429742AED008098C6 /* InputView.swift in Sources */,
 				2360D2252976D3D000837382 /* ModelData.swift in Sources */,
 				2360D2302976D5D600837382 /* LandmarkDetail.swift in Sources */,
