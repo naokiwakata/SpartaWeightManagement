@@ -6,34 +6,8 @@ class WeightsRepository: ObservableObject {
     private let path: String = "weights"
     private let firestore = Firestore.firestore()
     
-    func fetchUsers() {
-        firestore.collection(path)
-            .getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-                    }
-                }
-            }
-    }
-    
-    func fetchWeights() async -> [Weight] {
-        let weights: [Weight] = []
-        
-        
-        do {
-            let docs = try await firestore.collection(path).getDocuments()
-            print(docs)
-        } catch {
-            print("fetch weights error")
-        }
-        
-        return weights;
-    }
-    
-    func fetchWeights2(completion: @escaping ([Weight]) -> Void) {
+    // クロージャーを使用した非同期処理
+    func fetchWeights(completion: @escaping ([Weight]) -> Void) {
         var weights: [Weight] = []
         firestore.collection(path)
             .getDocuments(){ (snapshot,error) in
