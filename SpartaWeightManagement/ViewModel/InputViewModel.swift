@@ -8,15 +8,19 @@ class InputViewModel: ObservableObject {
     var selectedWeight: Weight?
     
     init(){
-        fetch()
+        Task.init{
+            try await fetch()
+        }
     }
     
     // weightsの取得および今日のweightがあれば取り出す
-    func fetch() {
-        weightsRepository.fetchWeights{ (weights) in
+    func fetch() async throws{
+        let user = try await AuthRepository.shared.getCurrentUser()
+        weightsRepository.fetchWeights(userId:user.uid){ (weights) in
             self.weights = weights
             self.selectedWeight = self.selectWeight(date: Date.now)
             print(self.selectedWeight ?? "なし")
+            print(weights)
         }
     }
     

@@ -7,9 +7,9 @@ class WeightsRepository: ObservableObject {
     private let firestore = Firestore.firestore()
     
     // クロージャーを使用した非同期処理
-    func fetchWeights(completion: @escaping ([Weight]) -> Void) {
+    func fetchWeights(userId:String,completion: @escaping ([Weight]) -> Void) {
         var weights: [Weight] = []
-        firestore.collection(path)
+        firestore.collection("users").document(userId).collection(path)
             .getDocuments(){ (snapshot,error) in
                 if let error = error {
                     print("Error fetching data: \(error)")
