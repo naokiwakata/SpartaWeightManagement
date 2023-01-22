@@ -9,4 +9,9 @@ class Weight{
         self.weight = weight
         self.date = date
     }
+    
+    func isSameDayWeight(date:Date)->Bool{
+        let isSameDay = Calendar.current.isDate(self.date, equalTo: date, toGranularity: .day)
+        return isSameDay
+    }
 }
