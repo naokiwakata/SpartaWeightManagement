@@ -19,4 +19,13 @@ class UsersRepository: ObservableObject {
                 }
             }
     }
+    
+    func fetchUser(userId:String) async throws -> DocumentSnapshot{
+        let document:DocumentSnapshot = try await firestore.collection(path).document(userId).getDocument()
+        return document
+    }
+    
+    func createUser(userId:String) async throws {
+        try await firestore.collection(path).document(userId).setData(["userId":userId,"createdAt":Date.now])
+    }
 }
