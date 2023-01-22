@@ -28,5 +28,10 @@ class WeightsRepository: ObservableObject {
                 completion(weights)
             }
     }
-
+    
+    func addWeight(userId:String,weight:Double,date:Date) async throws{
+        let result = try await firestore.collection("users").document(userId).collection(path).addDocument(data: ["weight" : weight,"date":date])
+        print(result)
+    }
+    
 }

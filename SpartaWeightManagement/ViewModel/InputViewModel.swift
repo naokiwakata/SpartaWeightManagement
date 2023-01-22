@@ -31,8 +31,9 @@ class InputViewModel: ObservableObject {
     }
     
     // firestoreに体重を保存
-    
-    func addWeight(newWeight : Weight){
+    func addWeight(newWeight : Weight)async throws{
+        let user = try await AuthRepository.shared.getCurrentUser()
+        try await weightsRepository.addWeight(userId: user.uid, weight: newWeight.weight,date:newWeight.date)
         weights.append(newWeight)
         print(weights)
     }

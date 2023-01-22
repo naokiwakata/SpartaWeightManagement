@@ -8,8 +8,11 @@ struct InputView: View {
         VStack {
             TextField("体重入力", value: $weight, formatter: NumberFormatter())
             Button("保存") {
-                let newWeight = Weight(weight: weight, date: Date.now)
-                inputViewModel.addWeight(newWeight: newWeight)
+                Task{
+                    let newWeight = Weight(weight: weight, date: Date.now)
+                    try await inputViewModel.addWeight(newWeight: newWeight)
+                }
+            
             }
         }
     }
